@@ -60,7 +60,11 @@ public class Panel extends JPanel {
 
         @Override
         public void mousePressed(MouseEvent e) {
-            System.out.printf("Mouse pressed. X: %s, Y: %s \n", e.getX(), e.getY());
+            System.out.printf("Mouse pressed. X: %s, Y: %s, Button: %s \n", e.getX(), e.getY(), e.getButton());
+            if(e.getButton() == 3){
+                scene2D.setOrigin(e.getX(), e.getY());
+                repaint();
+            }
         }
 
         @Override

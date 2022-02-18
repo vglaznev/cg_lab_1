@@ -58,6 +58,11 @@ public class Camera2D {
         this.height = Panel.DEFAULT_HEIGHT;
     }
 
+    public void setOrigin(int x, int y){
+        x0 = width / 2;
+        y0 = height / 2;
+    }
+
     //Очистка рабочей области окна
     public void clear(Graphics g) {
         g.clearRect(0, 0, width, height);
